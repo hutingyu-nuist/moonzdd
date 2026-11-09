@@ -52,11 +52,13 @@ pub fn Family::maximal(Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::maximum_weight(Self, Array[Int64]) -> WeightedSet? raise ZddError
 pub fn Family::minimal(Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::minimum_weight(Self, Array[Int64]) -> WeightedSet? raise ZddError
+pub fn Family::occurrences(Self) -> Array[UInt64] raise ZddError
 pub fn Family::page(Self, UInt64, Int32) -> Enumeration raise ZddError
 pub fn Family::powerset(Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::project(Self, Array[Int32], limits? : Limits) -> Self raise ZddError
 pub fn Family::rank(Self, Array[Int32]) -> UInt64 raise ZddError
 pub fn Family::rename(Self, Array[Int32], limits? : Limits) -> Self raise ZddError
+pub fn Family::restrict(Self, Array[Int32], Array[Int32], limits? : Limits) -> Self raise ZddError
 pub fn Family::singleton(Int32, Array[Int32], limits? : Limits) -> Self raise ZddError
 pub fn Family::statistics(Self) -> Statistics
 pub fn Family::symmetric_difference(Self, Self, limits? : Limits) -> Self raise ZddError
