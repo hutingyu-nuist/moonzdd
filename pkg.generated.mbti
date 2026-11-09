@@ -45,8 +45,10 @@ pub fn Family::items(Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::join(Self, Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::maximal(Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::minimal(Self, limits? : Limits) -> Self raise ZddError
+pub fn Family::page(Self, UInt64, Int32) -> Enumeration raise ZddError
 pub fn Family::powerset(Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::project(Self, Array[Int32], limits? : Limits) -> Self raise ZddError
+pub fn Family::rank(Self, Array[Int32]) -> UInt64 raise ZddError
 pub fn Family::rename(Self, Array[Int32], limits? : Limits) -> Self raise ZddError
 pub fn Family::singleton(Int32, Array[Int32], limits? : Limits) -> Self raise ZddError
 pub fn Family::symmetric_difference(Self, Self, limits? : Limits) -> Self raise ZddError
@@ -55,6 +57,7 @@ pub fn Family::transversals(Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::union(Self, Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::unit(Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::universe_size(Self) -> Int32
+pub fn Family::unrank(Self, UInt64) -> Array[Int32] raise ZddError
 pub fn Family::without_subsets_of(Self, Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::without_supersets_of(Self, Self, limits? : Limits) -> Self raise ZddError
 
