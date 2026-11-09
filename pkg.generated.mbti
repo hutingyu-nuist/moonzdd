@@ -28,11 +28,13 @@ pub fn Family::cardinality_spectrum(Self) -> Array[UInt64] raise ZddError
 pub fn Family::choose(Int32, Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::cofactor(Self, Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::compact(Self, limits? : Limits) -> Self raise ZddError
+pub fn Family::complement_members(Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::containing(Self, Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::contains(Self, Array[Int32]) -> Bool raise ZddError
 pub fn Family::count(Self) -> UInt64 raise ZddError
 pub fn Family::difference(Self, Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::disjoint_join(Self, Self, limits? : Limits) -> Self raise ZddError
+pub fn Family::downward_closure(Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::empty(Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::enumerate(Self, Int32, limits? : Limits) -> Enumeration raise ZddError
 pub fn Family::equivalent(Self, Self, limits? : Limits) -> Bool raise ZddError
@@ -61,6 +63,7 @@ pub fn Family::union(Self, Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::unit(Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::universe_size(Self) -> Int32
 pub fn Family::unrank(Self, UInt64) -> Array[Int32] raise ZddError
+pub fn Family::upward_closure(Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::without_subsets_of(Self, Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::without_supersets_of(Self, Self, limits? : Limits) -> Self raise ZddError
 
