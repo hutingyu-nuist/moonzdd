@@ -1,0 +1,5 @@
+import {
+  "hutingyu-nuist/moonzdd" @zdd,
+}
+
+pkgtype(kind: "executable")
