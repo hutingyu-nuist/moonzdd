@@ -23,7 +23,9 @@ pub struct Family {
   root : Int32
 }
 pub fn Family::choose(Int32, Int32, limits? : Limits) -> Self raise ZddError
+pub fn Family::cofactor(Self, Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::compact(Self, limits? : Limits) -> Self raise ZddError
+pub fn Family::containing(Self, Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::contains(Self, Array[Int32]) -> Bool raise ZddError
 pub fn Family::count(Self) -> UInt64 raise ZddError
 pub fn Family::difference(Self, Self, limits? : Limits) -> Self raise ZddError
@@ -31,6 +33,7 @@ pub fn Family::disjoint_join(Self, Self, limits? : Limits) -> Self raise ZddErro
 pub fn Family::empty(Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::enumerate(Self, Int32, limits? : Limits) -> Enumeration raise ZddError
 pub fn Family::equivalent(Self, Self, limits? : Limits) -> Bool raise ZddError
+pub fn Family::excluding(Self, Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::from_sets(Int32, Array[Array[Int32]], limits? : Limits) -> Self raise ZddError
 pub fn Family::intersection(Self, Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::is_disjoint(Self, Self, limits? : Limits) -> Bool raise ZddError
@@ -41,6 +44,7 @@ pub fn Family::join(Self, Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::powerset(Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::singleton(Int32, Array[Int32], limits? : Limits) -> Self raise ZddError
 pub fn Family::symmetric_difference(Self, Self, limits? : Limits) -> Self raise ZddError
+pub fn Family::toggle(Self, Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::union(Self, Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::unit(Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::universe_size(Self) -> Int32
