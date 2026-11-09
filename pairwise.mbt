@@ -1,5 +1,6 @@
 // Set-valued intersection/difference of each operand pair. Distinct from family
 // intersection/difference: those compare whole members instead of their items.
+
 ///|
 fn Engine::pairwise_nodes(
   self : Engine,

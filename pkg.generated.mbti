@@ -39,6 +39,7 @@ pub fn Family::empty(Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::enumerate(Self, Int32, limits? : Limits) -> Enumeration raise ZddError
 pub fn Family::equivalent(Self, Self, limits? : Limits) -> Bool raise ZddError
 pub fn Family::excluding(Self, Int32, limits? : Limits) -> Self raise ZddError
+pub fn Family::first(Self) -> Array[Int32]?
 pub fn Family::from_graph(GraphData, limits? : Limits) -> Self raise ZddError
 pub fn Family::from_json(String, limits? : Limits) -> Self raise ZddError
 pub fn Family::from_sets(Int32, Array[Array[Int32]], limits? : Limits) -> Self raise ZddError
@@ -48,6 +49,7 @@ pub fn Family::is_empty(Self) -> Bool
 pub fn Family::is_subfamily(Self, Self, limits? : Limits) -> Bool raise ZddError
 pub fn Family::items(Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::join(Self, Self, limits? : Limits) -> Self raise ZddError
+pub fn Family::last(Self) -> Array[Int32]?
 pub fn Family::maximal(Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::maximum_weight(Self, Array[Int64]) -> WeightedSet? raise ZddError
 pub fn Family::meet(Self, Self, limits? : Limits) -> Self raise ZddError
