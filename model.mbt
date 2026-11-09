@@ -4,6 +4,7 @@ pub(all) suberror ZddError {
   Invalid(String)
   BudgetExceeded
   CountOverflow
+  WeightOverflow
   MissingMember
 }
 

@@ -8,6 +8,7 @@ pub(all) suberror ZddError {
   Invalid(String)
   BudgetExceeded
   CountOverflow
+  WeightOverflow
   MissingMember
 }
 
@@ -44,7 +45,9 @@ pub fn Family::is_subfamily(Self, Self, limits? : Limits) -> Bool raise ZddError
 pub fn Family::items(Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::join(Self, Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::maximal(Self, limits? : Limits) -> Self raise ZddError
+pub fn Family::maximum_weight(Self, Array[Int64]) -> WeightedSet? raise ZddError
 pub fn Family::minimal(Self, limits? : Limits) -> Self raise ZddError
+pub fn Family::minimum_weight(Self, Array[Int64]) -> WeightedSet? raise ZddError
 pub fn Family::page(Self, UInt64, Int32) -> Enumeration raise ZddError
 pub fn Family::powerset(Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::project(Self, Array[Int32], limits? : Limits) -> Self raise ZddError
@@ -68,6 +71,11 @@ pub(all) struct Limits {
 pub fn Limits::default() -> Self
 
 type Node
+
+pub(all) struct WeightedSet {
+  elements : Array[Int32]
+  weight : Int64
+}
 
 // Type aliases
 
