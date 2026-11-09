@@ -58,7 +58,9 @@ pub fn Family::project(Self, Array[Int32], limits? : Limits) -> Self raise ZddEr
 pub fn Family::rank(Self, Array[Int32]) -> UInt64 raise ZddError
 pub fn Family::rename(Self, Array[Int32], limits? : Limits) -> Self raise ZddError
 pub fn Family::singleton(Int32, Array[Int32], limits? : Limits) -> Self raise ZddError
+pub fn Family::statistics(Self) -> Statistics
 pub fn Family::symmetric_difference(Self, Self, limits? : Limits) -> Self raise ZddError
+pub fn Family::to_dot(Self, max_nodes? : Int32) -> String raise ZddError
 pub fn Family::to_graph(Self) -> GraphData
 pub fn Family::to_json(Self) -> String
 pub fn Family::toggle(Self, Int32, limits? : Limits) -> Self raise ZddError
@@ -90,6 +92,14 @@ pub(all) struct NodeRecord {
   variable : Int32
   low : Int32
   high : Int32
+}
+
+pub(all) struct Statistics {
+  nonterminal_nodes : Int32
+  edges : Int32
+  height : Int32
+  support : Array[Int32]
+  nodes_per_variable : Array[Int32]
 }
 
 pub(all) struct WeightedSet {
