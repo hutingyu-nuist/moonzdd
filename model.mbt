@@ -56,7 +56,7 @@ fn engine(universe : Int32, limits : Limits) -> Engine raise ZddError {
     limits.steps > 100000000 {
     raise Invalid("limits: nodes 2..1000000, steps 1..100000000")
   }
-  let terminal = { variable: universe, low: 0, high: 0, }
+  let terminal : Node = { variable: universe, low: 0, high: 0, }
   { universe, nodes: [terminal, terminal], unique: Map([]), limits, steps: 0, }
 }
 

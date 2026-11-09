@@ -39,6 +39,7 @@ pub fn Family::empty(Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::enumerate(Self, Int32, limits? : Limits) -> Enumeration raise ZddError
 pub fn Family::equivalent(Self, Self, limits? : Limits) -> Bool raise ZddError
 pub fn Family::excluding(Self, Int32, limits? : Limits) -> Self raise ZddError
+pub fn Family::from_graph(GraphData, limits? : Limits) -> Self raise ZddError
 pub fn Family::from_sets(Int32, Array[Array[Int32]], limits? : Limits) -> Self raise ZddError
 pub fn Family::intersection(Self, Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::is_disjoint(Self, Self, limits? : Limits) -> Bool raise ZddError
@@ -57,6 +58,7 @@ pub fn Family::rank(Self, Array[Int32]) -> UInt64 raise ZddError
 pub fn Family::rename(Self, Array[Int32], limits? : Limits) -> Self raise ZddError
 pub fn Family::singleton(Int32, Array[Int32], limits? : Limits) -> Self raise ZddError
 pub fn Family::symmetric_difference(Self, Self, limits? : Limits) -> Self raise ZddError
+pub fn Family::to_graph(Self) -> GraphData
 pub fn Family::toggle(Self, Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::transversals(Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::union(Self, Self, limits? : Limits) -> Self raise ZddError
@@ -67,6 +69,13 @@ pub fn Family::upward_closure(Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::without_subsets_of(Self, Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::without_supersets_of(Self, Self, limits? : Limits) -> Self raise ZddError
 
+pub(all) struct GraphData {
+  format : Int32
+  universe : Int32
+  root : Int32
+  nodes : Array[NodeRecord]
+}
+
 pub(all) struct Limits {
   nodes : Int32
   steps : Int32
@@ -74,6 +83,12 @@ pub(all) struct Limits {
 pub fn Limits::default() -> Self
 
 type Node
+
+pub(all) struct NodeRecord {
+  variable : Int32
+  low : Int32
+  high : Int32
+}
 
 pub(all) struct WeightedSet {
   elements : Array[Int32]
