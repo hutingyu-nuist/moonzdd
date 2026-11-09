@@ -12,6 +12,11 @@ pub(all) suberror ZddError {
 }
 
 // Types and methods
+pub(all) struct Enumeration {
+  sets : Array[Array[Int32]]
+  complete : Bool
+}
+
 pub struct Family {
   universe : Int32
   nodes : Array[Node]
@@ -20,8 +25,10 @@ pub struct Family {
 pub fn Family::choose(Int32, Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::compact(Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::contains(Self, Array[Int32]) -> Bool raise ZddError
+pub fn Family::count(Self) -> UInt64 raise ZddError
 pub fn Family::difference(Self, Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::empty(Int32, limits? : Limits) -> Self raise ZddError
+pub fn Family::enumerate(Self, Int32, limits? : Limits) -> Enumeration raise ZddError
 pub fn Family::equivalent(Self, Self, limits? : Limits) -> Bool raise ZddError
 pub fn Family::from_sets(Int32, Array[Array[Int32]], limits? : Limits) -> Self raise ZddError
 pub fn Family::intersection(Self, Self, limits? : Limits) -> Self raise ZddError
