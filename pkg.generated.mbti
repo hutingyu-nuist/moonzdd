@@ -40,6 +40,7 @@ pub fn Family::enumerate(Self, Int32, limits? : Limits) -> Enumeration raise Zdd
 pub fn Family::equivalent(Self, Self, limits? : Limits) -> Bool raise ZddError
 pub fn Family::excluding(Self, Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::from_graph(GraphData, limits? : Limits) -> Self raise ZddError
+pub fn Family::from_json(String, limits? : Limits) -> Self raise ZddError
 pub fn Family::from_sets(Int32, Array[Array[Int32]], limits? : Limits) -> Self raise ZddError
 pub fn Family::intersection(Self, Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::is_disjoint(Self, Self, limits? : Limits) -> Bool raise ZddError
@@ -59,6 +60,7 @@ pub fn Family::rename(Self, Array[Int32], limits? : Limits) -> Self raise ZddErr
 pub fn Family::singleton(Int32, Array[Int32], limits? : Limits) -> Self raise ZddError
 pub fn Family::symmetric_difference(Self, Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::to_graph(Self) -> GraphData
+pub fn Family::to_json(Self) -> String
 pub fn Family::toggle(Self, Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::transversals(Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::union(Self, Self, limits? : Limits) -> Self raise ZddError
