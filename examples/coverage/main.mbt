@@ -1,4 +1,5 @@
 // Coverage input: each requirement lists tests capable of covering it.
+
 ///|
 fn main {
   try {
