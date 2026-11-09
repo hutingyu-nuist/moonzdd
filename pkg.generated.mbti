@@ -22,6 +22,8 @@ pub struct Family {
   nodes : Array[Node]
   root : Int32
 }
+pub fn Family::cardinality(Self, Int32, Int32, limits? : Limits) -> Self raise ZddError
+pub fn Family::cardinality_spectrum(Self) -> Array[UInt64] raise ZddError
 pub fn Family::choose(Int32, Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::cofactor(Self, Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::compact(Self, limits? : Limits) -> Self raise ZddError
