@@ -43,6 +43,7 @@ pub fn Family::is_empty(Self) -> Bool
 pub fn Family::is_subfamily(Self, Self, limits? : Limits) -> Bool raise ZddError
 pub fn Family::items(Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::join(Self, Self, limits? : Limits) -> Self raise ZddError
+pub fn Family::maximal(Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::minimal(Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::powerset(Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::project(Self, Array[Int32], limits? : Limits) -> Self raise ZddError
@@ -53,6 +54,7 @@ pub fn Family::toggle(Self, Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::union(Self, Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::unit(Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::universe_size(Self) -> Int32
+pub fn Family::without_subsets_of(Self, Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::without_supersets_of(Self, Self, limits? : Limits) -> Self raise ZddError
 
 pub(all) struct Limits {
