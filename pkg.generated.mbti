@@ -51,6 +51,7 @@ pub fn Family::rename(Self, Array[Int32], limits? : Limits) -> Self raise ZddErr
 pub fn Family::singleton(Int32, Array[Int32], limits? : Limits) -> Self raise ZddError
 pub fn Family::symmetric_difference(Self, Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::toggle(Self, Int32, limits? : Limits) -> Self raise ZddError
+pub fn Family::transversals(Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::union(Self, Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::unit(Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::universe_size(Self) -> Int32
