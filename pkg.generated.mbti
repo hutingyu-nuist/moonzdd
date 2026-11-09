@@ -27,6 +27,7 @@ pub fn Family::compact(Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::contains(Self, Array[Int32]) -> Bool raise ZddError
 pub fn Family::count(Self) -> UInt64 raise ZddError
 pub fn Family::difference(Self, Self, limits? : Limits) -> Self raise ZddError
+pub fn Family::disjoint_join(Self, Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::empty(Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::enumerate(Self, Int32, limits? : Limits) -> Enumeration raise ZddError
 pub fn Family::equivalent(Self, Self, limits? : Limits) -> Bool raise ZddError
@@ -36,6 +37,7 @@ pub fn Family::is_disjoint(Self, Self, limits? : Limits) -> Bool raise ZddError
 pub fn Family::is_empty(Self) -> Bool
 pub fn Family::is_subfamily(Self, Self, limits? : Limits) -> Bool raise ZddError
 pub fn Family::items(Int32, limits? : Limits) -> Self raise ZddError
+pub fn Family::join(Self, Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::powerset(Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::singleton(Int32, Array[Int32], limits? : Limits) -> Self raise ZddError
 pub fn Family::symmetric_difference(Self, Self, limits? : Limits) -> Self raise ZddError
