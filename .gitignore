@@ -1,0 +1,7 @@
+_build/
+.mooncakes/
+*.exe
+*.obj
+*.o
+*.c
+*.wat
