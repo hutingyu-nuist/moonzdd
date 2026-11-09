@@ -50,6 +50,7 @@ pub fn Family::items(Int32, limits? : Limits) -> Self raise ZddError
 pub fn Family::join(Self, Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::maximal(Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::maximum_weight(Self, Array[Int64]) -> WeightedSet? raise ZddError
+pub fn Family::meet(Self, Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::minimal(Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::minimum_weight(Self, Array[Int64]) -> WeightedSet? raise ZddError
 pub fn Family::occurrences(Self) -> Array[UInt64] raise ZddError
@@ -60,7 +61,9 @@ pub fn Family::rank(Self, Array[Int32]) -> UInt64 raise ZddError
 pub fn Family::rename(Self, Array[Int32], limits? : Limits) -> Self raise ZddError
 pub fn Family::restrict(Self, Array[Int32], Array[Int32], limits? : Limits) -> Self raise ZddError
 pub fn Family::singleton(Int32, Array[Int32], limits? : Limits) -> Self raise ZddError
+pub fn Family::size_bounds(Self) -> SizeBounds?
 pub fn Family::statistics(Self) -> Statistics
+pub fn Family::subtract_members(Self, Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::symmetric_difference(Self, Self, limits? : Limits) -> Self raise ZddError
 pub fn Family::to_dot(Self, max_nodes? : Int32) -> String raise ZddError
 pub fn Family::to_graph(Self) -> GraphData
@@ -94,6 +97,11 @@ pub(all) struct NodeRecord {
   variable : Int32
   low : Int32
   high : Int32
+}
+
+pub(all) struct SizeBounds {
+  minimum : Int32
+  maximum : Int32
 }
 
 pub(all) struct Statistics {
