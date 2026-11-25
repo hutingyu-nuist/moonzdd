@@ -1,6 +1,6 @@
 # MoonZDD
 
-MoonZDD 是纯 MoonBit 实现的零抑制决策图（ZDD）库，用来表示和计算有限的**集合族**，也就是“集合的集合”。模块为 `hutingyu-nuist/moonzdd@0.1.0`，许可证为 MIT。
+MoonZDD 是纯 MoonBit 实现的零抑制决策图（ZDD）库，用来表示和计算有限的**集合族**，也就是“集合的集合”。模块为 `hutingyu-nuist/moonzdd@0.1.1`，许可证为 MIT。
 
 配置集成工具可组合不同组件方案并筛选成本；测试工具可从覆盖关系计算最小测试组合；稀疏项集工具可进行投影、频数统计、分页和压缩图交换。输入模型统一为整数项号，库不绑定网站、设备或特定业务规则。
 
@@ -15,14 +15,14 @@ MoonZDD 是纯 MoonBit 实现的零抑制决策图（ZDD）库，用来表示和
 
 ## 环境与安装
 
-开发及 CI 固定 `moonc v0.10.18+6c83a7f62`，高于验收最低版本 0.10.16。由于使用当前的 `moon.mod` / `moon.pkg` 语法，建议直接使用上述编译器及配套 core；不宣称已验证所有旧编译器。
+开发及 CI 固定 `moonc v0.10.22+124d61d05`，高于验收最低版本 0.10.16。由于使用当前的 `moon.mod` / `moon.pkg` 语法，建议直接使用上述编译器及配套 core；不宣称已验证所有旧编译器。
 
 支持 `wasm-gc`、`wasm`、`js`、`native`。JS 需要 Node.js；native 需要 C 编译工具链。运行情况见仓库 Actions 的四后端检查；Windows 本机缺少 native 编译器时，不能将检查成功当作本机 native 测试已运行。
 
 在自己的 MoonBit 模块中添加精确版本依赖：
 
 ```sh
-moon add hutingyu-nuist/moonzdd@0.1.0
+moon add hutingyu-nuist/moonzdd@0.1.1
 ```
 
 在使用处的 `moon.pkg` 导入：
